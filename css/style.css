@@ -504,9 +504,20 @@ input[type="radio"].visually-hidden {
 
 .map {
   position: relative;
-  background: url(../img/map-marker.jpg) no-repeat 50% 50%;
   width: 100%;
   height: 416px;
+}
+
+.map::before {
+  content: "";
+  position: absolute;
+  width: 231px;
+  height: 190px;
+  background-image: url("../img/map-marker.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  left: calc(50% + 100px);
+  top: 90px;
 }
 
 .map-image {
