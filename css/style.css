@@ -8,7 +8,6 @@ body {
   font-weight: 400;
   color: #283136;
   background-color: #ffffff;
-  /* min-width: 1200px; */
 }
 
 a {
@@ -113,8 +112,18 @@ input[type="radio"].visually-hidden {
   padding-bottom: 10px;
 }
 
-.site-navigation-current a {
-  border-bottom: 2px solid #fb565a;
+.site-navigation-current {
+  position: relative;
+}
+
+.site-navigation-current::after {
+  content: "";
+  position: absolute;
+  right: 23px;
+  bottom: 0;
+  left: 23px;
+  height: 2px;
+  background-color: #fb565a;
 }
 
 .site-navigation a,
@@ -495,20 +504,9 @@ input[type="radio"].visually-hidden {
 
 .map {
   position: relative;
+  background: url(../img/map-marker.jpg) no-repeat 50% 50%;
   width: 100%;
   height: 416px;
-}
-
-.map::before {
-  content: "";
-  position: absolute;
-  width: 231px;
-  height: 190px;
-  background-image: url("../img/map-marker.jpg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  left: calc(50% + 100px);
-  top: 90px;
 }
 
 .map-image {
