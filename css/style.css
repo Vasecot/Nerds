@@ -8,6 +8,7 @@ body {
   font-weight: 400;
   color: #283136;
   background-color: #ffffff;
+  min-width: 1200px;
 }
 
 a {
@@ -92,6 +93,20 @@ input[type="radio"].visually-hidden {
   flex-wrap: wrap;
 }
 
+.site-navigation-current {
+  position: relative;
+}
+
+.site-navigation-current::after {
+  content: "";
+  position: absolute;
+  right: 23px;
+  bottom: 0;
+  left: 23px;
+  height: 2px;
+  background-color: #fb565a;
+}
+
 .site-navigation a {
   padding-top: 55px;
   padding-left: 23px;
@@ -110,20 +125,6 @@ input[type="radio"].visually-hidden {
 .buy-navigation a {
   padding-top: 55px;
   padding-bottom: 10px;
-}
-
-.site-navigation-current {
-  position: relative;
-}
-
-.site-navigation-current::after {
-  content: "";
-  position: absolute;
-  right: 23px;
-  bottom: 0;
-  left: 23px;
-  height: 2px;
-  background-color: #fb565a;
 }
 
 .site-navigation a,
