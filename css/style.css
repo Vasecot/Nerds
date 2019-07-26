@@ -8,7 +8,6 @@ body {
   font-weight: 400;
   color: #283136;
   background-color: #ffffff;
-  min-width: 1200px;
 }
 
 a {
@@ -30,17 +29,17 @@ input[type="radio"].visually-hidden {
 }
 
 .container {
-  width: 1200px;
+  width: 1160px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  box-sizing: border-box;
+  padding: 0;
 }
 
 /* Cтилизация хидера */
 .main-header {
+  margin: 0;
+  min-width: 1200px;
+  padding: 50px 0 0;
   background-color: #eeeeee;
-  margin-bottom: 80px;
 }
 
 .main-header h1 {
@@ -59,7 +58,6 @@ input[type="radio"].visually-hidden {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-weight: 500;
 }
 
 .main-header-logo {
@@ -86,6 +84,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   list-style: none;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 .site-navigation {
@@ -132,6 +131,7 @@ input[type="radio"].visually-hidden {
   display: block;
   line-height: 30px;
   color: #000000;
+  font-weight: 500px;
 }
 
 .site-navigation a:hover,
@@ -234,27 +234,18 @@ input[type="radio"].visually-hidden {
   left: 50%;
   bottom: 104px;
   z-index: 100;
-  width: 160px;
+  width: 200px;
   height: 18px;
   text-align: center;
   font-size: 0;
-  transform: translateX(-50%)
-}
-
-.slider-controls {
-  position: absolute;
-  bottom: 95px;
-  left: 50%;
-  width: 200px;
-  height: 10px;
-  text-align: center;
+  transform: translateX(-50%);
   z-index: 2;
 }
 
 .slider-controls label {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   margin: 0 8px;
   background: white;
   border: 3px solid white;
@@ -303,9 +294,8 @@ input[type="radio"].visually-hidden {
 
 .advantage {
   margin: 0;
-  padding: 0;
+  padding: 80px 0;
   border-bottom: 2px solid #eeeeee;
-  padding-bottom: 80px;
 }
 
 .advantage-list {
@@ -369,17 +359,15 @@ input[type="radio"].visually-hidden {
 }
 
 /* Стилизация описания студии */
-.studio-info {
-  margin: 0;
-  padding: 0;
+.studio-info .container {
+  padding: 40px 0 75px;
   display: flex;
+  justify-content: space-between;
   border-bottom: 2px solid #eeeeee;
-  padding-top: 40px;
 }
 
 .studio-info-tasks {
-  width: 660px;
-  margin-right: 140px;
+  width: 700px;
   /* border: 1px solid black; */
   padding-top: 40px;
 }
@@ -390,7 +378,7 @@ input[type="radio"].visually-hidden {
   font-size: 45px;
   line-height: 45px;
   font-weight: 500;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .studio-list-title {
@@ -398,21 +386,20 @@ input[type="radio"].visually-hidden {
   font-size: 18px;
   line-height: 22px;
   font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin-top: 40px;
+  margin-bottom: 23px;
 }
 
 .studio-list {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-bottom: 70px;
 }
 
 .studio-list-item {
   position: relative;
   padding-left: 35px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .studio-list-item::before {
@@ -425,8 +412,13 @@ input[type="radio"].visually-hidden {
   left: 0px;
 }
 
+.studio-list-item:last-child {
+  margin-bottom: 0;
+}
+
 .studio-info-table {
   width: 360px;
+  margin-left: auto;
 }
 
 .studio-info-table .title {
@@ -468,10 +460,9 @@ input[type="radio"].visually-hidden {
 }
 
 /* СТИЛИЗАЦИЯ ПЕРЕЧНЯ ПРОЕКТОВ СТУДИИ */
-.project-catalog {
-  /* border-top: 2px solid #eeeeee; */
+.project-catalog .container {
   border-bottom: 2px solid #eeeeee;
-  padding: 45px 0;
+  padding: 60px 0 20px;
 }
 
 .project-catalog-list {
@@ -479,53 +470,53 @@ input[type="radio"].visually-hidden {
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
 }
 
 .project-catalog-item {
   position: relative;
+}
+
+.project-catalog-item a {
   opacity: 0.2;
 }
 
-.project-catalog-item:focus,
-.project-catalog-item:hover {
+.project-catalog-item:nth-child(1)::after,
+.project-catalog-item:nth-child(2)::after,
+.project-catalog-item:nth-child(3)::after {
+  content: "";
+  width: 2px;
+  height: 52px;
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  left: 249px;
+}
+
+.project-catalog-item a:focus,
+.project-catalog-item a:hover {
   opacity: 1;
 }
 
-.project-catalog-item:active {
+.project-catalog-item a:active {
   opacity: 0.1;
-}
-
-/* СТИЛИЗАЦИЯ ФУТЕРА СТРАНИЦЫ */
-.main-footer {
-  background-color: #ffffff;
-  padding-top: 80px;
 }
 
 .map {
   position: relative;
-  width: 100%;
-  height: 416px;
-}
-
-.map::before {
-  content: "";
-  position: absolute;
-  width: 231px;
-  height: 190px;
-  background-image: url("../img/map-marker.jpg");
+  background-image: url(../img/map-marker.jpg);
   background-repeat: no-repeat;
-  background-position: 0 0;
-  left: calc(50% + 100px);
-  top: 90px;
+  background-position: 50% 42%;
+  background-size: cover;
+  height: 420px;
+  margin-top: 80px;
+  z-index: 1;
 }
 
-.map-image {
+.map iframe {
   position: absolute;
-  top: 0px;
-  left: calc(50% - 1440px / 2);
-  z-index: 1;
+  width: 100%;
+  height: 420px;
 }
 
 .contacts {
@@ -540,9 +531,9 @@ input[type="radio"].visually-hidden {
   margin: 0;
   background-color: #ffffff;
   position: absolute;
-  top: 54px;
+  top: 55px;
   left: calc(50% - 580px);
-  z-index: 2;
+  z-index: 3;
 }
 
 .contacts h3 {
@@ -591,10 +582,15 @@ input[type="radio"].visually-hidden {
   background-color: #d7373b;
 }
 
+/* СТИЛИЗАЦИЯ ФУТЕРА СТРАНИЦЫ */
+.main-footer {
+  background-color: #ffffff;
+  margin-top: 65px;
+}
+
 .footer-social {
   margin: 0;
   padding: 0;
-  padding-top: 55px;
   display: flex;
   align-items: flex-start;
 }
@@ -634,7 +630,7 @@ input[type="radio"].visually-hidden {
 .footer-social-slogan {
   padding: 0;
   margin-left: 140px;
-  width: 560px;
+  width: 600px;
 }
 
 .footer-social-slogan b {
@@ -673,6 +669,58 @@ input[type="radio"].visually-hidden {
   width: 780px;
   margin-left: -470px;
   padding: 60px 100px;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.modal-show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+@keyframes shake {
+
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
 }
 
 .modal-close {
